@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4464CC81DF3258500646D8B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4464CC61DF3258500646D8B /* Model.xcdatamodeld */; };
+		F4464CD21DF3346D00646D8B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4464CD11DF3346D00646D8B /* CoreDataStack.swift */; };
 		F44B4E7E1DEDC68E00C051FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E7D1DEDC68E00C051FA /* AppDelegate.swift */; };
-		F44B4E801DEDC68E00C051FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E7F1DEDC68E00C051FA /* ViewController.swift */; };
 		F44B4E831DEDC68E00C051FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44B4E811DEDC68E00C051FA /* Main.storyboard */; };
 		F44B4E851DEDC68E00C051FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44B4E841DEDC68E00C051FA /* Assets.xcassets */; };
 		F44B4E881DEDC68E00C051FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44B4E861DEDC68E00C051FA /* LaunchScreen.storyboard */; };
 		F44B4E931DEDC68E00C051FA /* Where_To_SnowboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E921DEDC68E00C051FA /* Where_To_SnowboardTests.swift */; };
 		F44B4E9E1DEDC68E00C051FA /* Where_To_SnowboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E9D1DEDC68E00C051FA /* Where_To_SnowboardUITests.swift */; };
+		F460DD491DEF553D00D74E71 /* SkimapClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460DD481DEF553D00D74E71 /* SkimapClient.swift */; };
+		F460DD4B1DEF559800D74E71 /* SkimapConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460DD4A1DEF559800D74E71 /* SkimapConstants.swift */; };
+		F460DD4D1DEF567F00D74E71 /* WorldWeatherOnlineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460DD4C1DEF567F00D74E71 /* WorldWeatherOnlineClient.swift */; };
+		F460DD4F1DEF569800D74E71 /* WorldWeatherOnlineConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460DD4E1DEF569800D74E71 /* WorldWeatherOnlineConstants.swift */; };
+		F460DD511DEF583200D74E71 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460DD501DEF583200D74E71 /* RegionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F4464CC71DF3258500646D8B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		F4464CD11DF3346D00646D8B /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = "../../Virtual Tourist/CoreDataStack.swift"; sourceTree = "<group>"; };
 		F44B4E7A1DEDC68E00C051FA /* Where To Snowboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where To Snowboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44B4E7D1DEDC68E00C051FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F44B4E7F1DEDC68E00C051FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F44B4E821DEDC68E00C051FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F44B4E841DEDC68E00C051FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F44B4E871DEDC68E00C051FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +54,11 @@
 		F44B4E991DEDC68E00C051FA /* Where To SnowboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Where To SnowboardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44B4E9D1DEDC68E00C051FA /* Where_To_SnowboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Where_To_SnowboardUITests.swift; sourceTree = "<group>"; };
 		F44B4E9F1DEDC68E00C051FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F460DD481DEF553D00D74E71 /* SkimapClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkimapClient.swift; sourceTree = "<group>"; };
+		F460DD4A1DEF559800D74E71 /* SkimapConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkimapConstants.swift; sourceTree = "<group>"; };
+		F460DD4C1DEF567F00D74E71 /* WorldWeatherOnlineClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldWeatherOnlineClient.swift; sourceTree = "<group>"; };
+		F460DD4E1DEF569800D74E71 /* WorldWeatherOnlineConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldWeatherOnlineConstants.swift; sourceTree = "<group>"; };
+		F460DD501DEF583200D74E71 /* RegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +109,10 @@
 		F44B4E7C1DEDC68E00C051FA /* Where To Snowboard */ = {
 			isa = PBXGroup;
 			children = (
+				F460DD471DEF54F200D74E71 /* Controllers */,
+				F460DD461DEF54EB00D74E71 /* Models */,
+				F460DD451DEF54CC00D74E71 /* Clients */,
 				F44B4E7D1DEDC68E00C051FA /* AppDelegate.swift */,
-				F44B4E7F1DEDC68E00C051FA /* ViewController.swift */,
 				F44B4E811DEDC68E00C051FA /* Main.storyboard */,
 				F44B4E841DEDC68E00C051FA /* Assets.xcassets */,
 				F44B4E861DEDC68E00C051FA /* LaunchScreen.storyboard */,
@@ -123,6 +137,34 @@
 				F44B4E9F1DEDC68E00C051FA /* Info.plist */,
 			);
 			path = "Where To SnowboardUITests";
+			sourceTree = "<group>";
+		};
+		F460DD451DEF54CC00D74E71 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				F460DD481DEF553D00D74E71 /* SkimapClient.swift */,
+				F460DD4A1DEF559800D74E71 /* SkimapConstants.swift */,
+				F460DD4C1DEF567F00D74E71 /* WorldWeatherOnlineClient.swift */,
+				F460DD4E1DEF569800D74E71 /* WorldWeatherOnlineConstants.swift */,
+			);
+			name = Clients;
+			sourceTree = "<group>";
+		};
+		F460DD461DEF54EB00D74E71 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4464CD11DF3346D00646D8B /* CoreDataStack.swift */,
+				F4464CC61DF3258500646D8B /* Model.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F460DD471DEF54F200D74E71 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F460DD501DEF583200D74E71 /* RegionViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F44B4E801DEDC68E00C051FA /* ViewController.swift in Sources */,
+				F460DD491DEF553D00D74E71 /* SkimapClient.swift in Sources */,
+				F4464CD21DF3346D00646D8B /* CoreDataStack.swift in Sources */,
+				F460DD511DEF583200D74E71 /* RegionViewController.swift in Sources */,
+				F460DD4F1DEF569800D74E71 /* WorldWeatherOnlineConstants.swift in Sources */,
+				F4464CC81DF3258500646D8B /* Model.xcdatamodeld in Sources */,
+				F460DD4D1DEF567F00D74E71 /* WorldWeatherOnlineClient.swift in Sources */,
+				F460DD4B1DEF559800D74E71 /* SkimapConstants.swift in Sources */,
 				F44B4E7E1DEDC68E00C051FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +562,7 @@
 				F44B4EA41DEDC68E00C051FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F44B4EA51DEDC68E00C051FA /* Build configuration list for PBXNativeTarget "Where To SnowboardTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +571,7 @@
 				F44B4EA71DEDC68E00C051FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F44B4EA81DEDC68E00C051FA /* Build configuration list for PBXNativeTarget "Where To SnowboardUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,8 +580,23 @@
 				F44B4EAA1DEDC68E00C051FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F4464CC61DF3258500646D8B /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F4464CC71DF3258500646D8B /* Model.xcdatamodel */,
+			);
+			currentVersion = F4464CC71DF3258500646D8B /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F44B4E721DEDC68E00C051FA /* Project object */;
 }
