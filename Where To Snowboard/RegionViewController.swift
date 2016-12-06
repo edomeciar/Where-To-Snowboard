@@ -22,6 +22,8 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     var regionLvl1 = [Region]()
     var regionLvl2 = [Region]()
     
+    var foundCharacters = "";
+    
     var sharedContext: NSManagedObjectContext{
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let stack = delegate.stack
@@ -44,11 +46,23 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
         
         
         regionLvl0PickerView.tag = 0
+        regionLvl1PickerView.tag = 1
+        regionLvl2PickerView.tag = 2
         
         print("get test xml")
         
+        //test if regions exist in CoreData
+        if(false){
+            //Regions exist in CoreData
+        }else{
+            loadRegions()
+        }
+    
+    }
+    
+    func loadRegions(){
         SkimapClient.sharedInstance().getRegions(regionId: "", completitionHandler: { (xmlData, errorString) in
-        
+            
             print("xmlString: \(xmlData)")
             if let errorString = errorString{
                 print(errorString)
@@ -79,7 +93,11 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if regionLvl0PickerView.tag == 0 {
-            return regionLvl0[row].name
+            if let name = regionLvl0[row].name{
+                return name
+            }else{
+                return "B"
+            }
         } else if regionLvl1PickerView.tag == 1 {
             return regionLvl1[row].name
         } else if regionLvl2PickerView.tag == 2 {
@@ -102,16 +120,33 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     
     //parser delegata
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-        print(elementName)
+        self.foundCharacters = ""
+        if(elementName == "region"){
+            
+        }
         //var region = Region()
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        print(elementName)
+        if(elementName == "region"){
+            print(self.foundCharacters)
+            let tmpRegion = Region(name: self.foundCharacters, context: self.sharedContext)
+            regionLvl0.append(tmpRegion)
+            //print(self.foundCharacters)
+        }
+        self.foundCharacters = ""
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
-        print(string)
+        self.foundCharacters += string
+    }
+    
+    func parserDidEndDocument(_ parser: XMLParser) {
+        DispatchQueue.main.async {
+            self.regionLvl0PickerView.reloadAllComponents()
+            print(self.regionLvl0)
+        }
+        
     }
     
 }

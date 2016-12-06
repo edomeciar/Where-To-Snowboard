@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2657" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Region" representedClassName=".Region" syncable="YES" codeGenerationType="class">
+    <entity name="Region" representedClassName="Region" syncable="YES">
         <attribute name="geo_lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="geo_lng" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="geo_zoom" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -11,7 +11,7 @@
         <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Region" inverseName="parent" inverseEntity="Region" syncable="YES"/>
         <relationship name="skiarea" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SkiArea" inverseName="region" inverseEntity="SkiArea" syncable="YES"/>
     </entity>
-    <entity name="SkiArea" representedClassName=".SkiArea" syncable="YES" codeGenerationType="class">
+    <entity name="SkiArea" representedClassName="SkiArea" syncable="YES">
         <attribute name="geo_lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="geo_lng" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="geo_zoom" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>

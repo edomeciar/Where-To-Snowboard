@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		F4464CC81DF3258500646D8B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4464CC61DF3258500646D8B /* Model.xcdatamodeld */; };
 		F4464CD21DF3346D00646D8B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4464CD11DF3346D00646D8B /* CoreDataStack.swift */; };
+		F4464CE71DF763F300646D8B /* SkiArea+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4464CE31DF763F300646D8B /* SkiArea+CoreDataClass.swift */; };
+		F4464CE81DF763F300646D8B /* SkiArea+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4464CE41DF763F300646D8B /* SkiArea+CoreDataProperties.swift */; };
+		F4464CE91DF763F300646D8B /* Region+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4464CE51DF763F300646D8B /* Region+CoreDataClass.swift */; };
+		F4464CEA1DF763F300646D8B /* Region+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4464CE61DF763F300646D8B /* Region+CoreDataProperties.swift */; };
 		F44B4E7E1DEDC68E00C051FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E7D1DEDC68E00C051FA /* AppDelegate.swift */; };
 		F44B4E831DEDC68E00C051FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44B4E811DEDC68E00C051FA /* Main.storyboard */; };
 		F44B4E851DEDC68E00C051FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44B4E841DEDC68E00C051FA /* Assets.xcassets */; };
@@ -42,6 +46,10 @@
 /* Begin PBXFileReference section */
 		F4464CC71DF3258500646D8B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		F4464CD11DF3346D00646D8B /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = "../../Virtual Tourist/CoreDataStack.swift"; sourceTree = "<group>"; };
+		F4464CE31DF763F300646D8B /* SkiArea+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SkiArea+CoreDataClass.swift"; path = "../SkiArea+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F4464CE41DF763F300646D8B /* SkiArea+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SkiArea+CoreDataProperties.swift"; path = "../SkiArea+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F4464CE51DF763F300646D8B /* Region+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Region+CoreDataClass.swift"; path = "../Region+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F4464CE61DF763F300646D8B /* Region+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Region+CoreDataProperties.swift"; path = "../Region+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F44B4E7A1DEDC68E00C051FA /* Where To Snowboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where To Snowboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44B4E7D1DEDC68E00C051FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44B4E821DEDC68E00C051FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,6 +161,10 @@
 		F460DD461DEF54EB00D74E71 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F4464CE31DF763F300646D8B /* SkiArea+CoreDataClass.swift */,
+				F4464CE41DF763F300646D8B /* SkiArea+CoreDataProperties.swift */,
+				F4464CE51DF763F300646D8B /* Region+CoreDataClass.swift */,
+				F4464CE61DF763F300646D8B /* Region+CoreDataProperties.swift */,
 				F4464CD11DF3346D00646D8B /* CoreDataStack.swift */,
 				F4464CC61DF3258500646D8B /* Model.xcdatamodeld */,
 			);
@@ -305,13 +317,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F460DD491DEF553D00D74E71 /* SkimapClient.swift in Sources */,
+				F4464CE71DF763F300646D8B /* SkiArea+CoreDataClass.swift in Sources */,
+				F4464CE81DF763F300646D8B /* SkiArea+CoreDataProperties.swift in Sources */,
 				F4464CD21DF3346D00646D8B /* CoreDataStack.swift in Sources */,
 				F460DD511DEF583200D74E71 /* RegionViewController.swift in Sources */,
 				F460DD4F1DEF569800D74E71 /* WorldWeatherOnlineConstants.swift in Sources */,
 				F4464CC81DF3258500646D8B /* Model.xcdatamodeld in Sources */,
 				F460DD4D1DEF567F00D74E71 /* WorldWeatherOnlineClient.swift in Sources */,
 				F460DD4B1DEF559800D74E71 /* SkimapConstants.swift in Sources */,
+				F4464CEA1DF763F300646D8B /* Region+CoreDataProperties.swift in Sources */,
 				F44B4E7E1DEDC68E00C051FA /* AppDelegate.swift in Sources */,
+				F4464CE91DF763F300646D8B /* Region+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
