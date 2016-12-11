@@ -31,13 +31,10 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     }
     
     private func saveContext(){
-        do{
-            let delegate = UIApplication.shared.delegate as! AppDelegate
-            try delegate.stack.save()
-            print("context saved ")
-        }catch let error as NSError {
-            print("context NOT saved \(error)")
-        }
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.stack.save()
+        print("context saved ")
+       
     }
     
     
