@@ -2,7 +2,7 @@
 //  Region+CoreDataProperties.swift
 //  Where To Snowboard
 //
-//  Created by Edo on 06/12/2016.
+//  Created by Edo on 09/12/2016.
 //  Copyright © 2016 eduard.mecair. All rights reserved.
 //
 
@@ -16,13 +16,14 @@ extension Region {
         return NSFetchRequest<Region>(entityName: "Region");
     }
 
-    @NSManaged public var id: Int16
-    @NSManaged public var name: String?
-    @NSManaged public var level: Int16
-    @NSManaged public var type: String?
     @NSManaged public var geo_lat: Double
     @NSManaged public var geo_lng: Double
     @NSManaged public var geo_zoom: Double
+    @NSManaged public var id: Int32
+    @NSManaged public var level: Int32
+    @NSManaged public var name: String?
+    @NSManaged public var type: String?
+    @NSManaged public var selected: Bool
     @NSManaged public var parent: Region?
     @NSManaged public var skiarea: NSSet?
 
