@@ -14,6 +14,7 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     
     var parser = XMLParser()
     
+    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var regionLvl0PickerView: UIPickerView!
     @IBOutlet weak var regionLvl1PickerView: UIPickerView!
@@ -181,11 +182,19 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     }
     
     func prepareToLoadSkiAreas(){
-        searchButton.isEnabled = true
+        if skiAreas.count > 0{
+            infoLabel.text = "\(skiAreas.count) found in selected Region"
+            searchButton.isEnabled = true
+        }
+        
         
         print("count of SkiAreas \(skiAreas.count)")
     }
     
+    @IBAction func showSkiAreasTouchUpAction(_ sender: Any) {
+        performSegue(withIdentifier: "showTabBarContollerSegue", sender: self)
+        
+    }
     //Picker View 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -310,12 +319,18 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
             }else{
                 if self.parsingRegionLevel == 0{
                     self.regionLvl0PickerView.reloadAllComponents()
+                    self.regionLvl1PickerView.isHidden = true
+                    self.regionLvl2PickerView.isHidden = true
                 }else if self.parsingRegionLevel == 1{
                     self.regionLvl1PickerView.reloadAllComponents()
+                    self.regionLvl1PickerView.isHidden = false
+                    self.regionLvl2PickerView.isHidden = true
                 }else if self.parsingRegionLevel == 2{
                     self.regionLvl2PickerView.reloadAllComponents()
+                    self.regionLvl2PickerView.isHidden = false
                 }
             }
+            self.prepareToLoadSkiAreas()
             self.saveContext()
         }
     }
