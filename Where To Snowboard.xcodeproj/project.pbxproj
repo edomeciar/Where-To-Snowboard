@@ -23,10 +23,9 @@
 		F44B4E9E1DEDC68E00C051FA /* Where_To_SnowboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E9D1DEDC68E00C051FA /* Where_To_SnowboardUITests.swift */; };
 		F460DD491DEF553D00D74E71 /* SkimapClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460DD481DEF553D00D74E71 /* SkimapClient.swift */; };
 		F460DD4B1DEF559800D74E71 /* SkimapConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460DD4A1DEF559800D74E71 /* SkimapConstants.swift */; };
-		F460DD4D1DEF567F00D74E71 /* WorldWeatherOnlineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460DD4C1DEF567F00D74E71 /* WorldWeatherOnlineClient.swift */; };
-		F460DD4F1DEF569800D74E71 /* WorldWeatherOnlineConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460DD4E1DEF569800D74E71 /* WorldWeatherOnlineConstants.swift */; };
 		F460DD511DEF583200D74E71 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460DD501DEF583200D74E71 /* RegionViewController.swift */; };
 		F4E4FA001E0461600072870D /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E4F9FF1E0461600072870D /* CoreDataTableViewController.swift */; };
+		F4E4FA021E055FD90072870D /* DetailSkiAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E4FA011E055FD90072870D /* DetailSkiAreaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,10 +71,9 @@
 		F44E063A1DFE211100B0914F /* Model 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 4.xcdatamodel"; sourceTree = "<group>"; };
 		F460DD481DEF553D00D74E71 /* SkimapClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkimapClient.swift; sourceTree = "<group>"; };
 		F460DD4A1DEF559800D74E71 /* SkimapConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkimapConstants.swift; sourceTree = "<group>"; };
-		F460DD4C1DEF567F00D74E71 /* WorldWeatherOnlineClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldWeatherOnlineClient.swift; sourceTree = "<group>"; };
-		F460DD4E1DEF569800D74E71 /* WorldWeatherOnlineConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldWeatherOnlineConstants.swift; sourceTree = "<group>"; };
 		F460DD501DEF583200D74E71 /* RegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
 		F4E4F9FF1E0461600072870D /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataTableViewController.swift; path = "../../../Downloads/ios-nd-persistence-swift-3/CoolNotes/13-CoreDataAndConcurrency/CoolNotes/CoreDataTableViewController.swift"; sourceTree = "<group>"; };
+		F4E4FA011E055FD90072870D /* DetailSkiAreaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSkiAreaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,8 +159,6 @@
 			children = (
 				F460DD481DEF553D00D74E71 /* SkimapClient.swift */,
 				F460DD4A1DEF559800D74E71 /* SkimapConstants.swift */,
-				F460DD4C1DEF567F00D74E71 /* WorldWeatherOnlineClient.swift */,
-				F460DD4E1DEF569800D74E71 /* WorldWeatherOnlineConstants.swift */,
 			);
 			name = Clients;
 			sourceTree = "<group>";
@@ -187,6 +183,7 @@
 				F460DD501DEF583200D74E71 /* RegionViewController.swift */,
 				F44478971E0202E0000F5698 /* MapViewController.swift */,
 				F44478991E0206E0000F5698 /* TableViewCoreDataController.swift */,
+				F4E4FA011E055FD90072870D /* DetailSkiAreaViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -332,12 +329,11 @@
 				F460DD491DEF553D00D74E71 /* SkimapClient.swift in Sources */,
 				F4464CD21DF3346D00646D8B /* CoreDataStack.swift in Sources */,
 				F460DD511DEF583200D74E71 /* RegionViewController.swift in Sources */,
-				F460DD4F1DEF569800D74E71 /* WorldWeatherOnlineConstants.swift in Sources */,
 				F4464CC81DF3258500646D8B /* Model.xcdatamodeld in Sources */,
-				F460DD4D1DEF567F00D74E71 /* WorldWeatherOnlineClient.swift in Sources */,
 				F460DD4B1DEF559800D74E71 /* SkimapConstants.swift in Sources */,
 				F4E4FA001E0461600072870D /* CoreDataTableViewController.swift in Sources */,
 				F444789A1E0206E0000F5698 /* TableViewCoreDataController.swift in Sources */,
+				F4E4FA021E055FD90072870D /* DetailSkiAreaViewController.swift in Sources */,
 				F4464D021DFB22BB00646D8B /* SkiArea+CoreDataProperties.swift in Sources */,
 				F4464CFA1DFA21F900646D8B /* Region+CoreDataProperties.swift in Sources */,
 				F44B4E7E1DEDC68E00C051FA /* AppDelegate.swift in Sources */,

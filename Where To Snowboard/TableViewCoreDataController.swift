@@ -63,4 +63,19 @@ class TableViewCoreDataController: CoreDataTableViewController{
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showSkiAreaSegue" {
+            
+            // Get the note
+            // Get the detailVC
+            if let ip = tableView.indexPathForSelectedRow, let skiArea = fetchedResultsController?.object(at: ip) as? SkiArea, let vc = segue.destination as? DetailSkiAreaViewController {
+                // Inject the note in the the detailVC
+                vc.skiArea = skiArea
+            }
+        }
+        
+        
+    }
+    
 }

@@ -14,11 +14,15 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     
     var parser = XMLParser()
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var regionLvl0PickerView: UIPickerView!
     @IBOutlet weak var regionLvl1PickerView: UIPickerView!
     @IBOutlet weak var regionLvl2PickerView: UIPickerView!
+    @IBOutlet weak var regionLvl0Label: UILabel!
+    @IBOutlet weak var regionLvl1Label: UILabel!
+    @IBOutlet weak var regionLvl2Label: UILabel!
     
     var regionLvl0 = [Region]()
     var regionLvl1 = [Region]()
@@ -76,7 +80,18 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     
     }
     
+    func displayError(_ errorString: String?) {
+        guard let errorString = errorString else {
+            return
+        }
+        
+        let myAlert = UIAlertController(title: errorString, message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        myAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(myAlert, animated: true, completion: nil)
+    }
+    
     func getRegions(){
+        self.activityIndicator.startAnimating()
         let regionRequest = NSFetchRequest<Region>(entityName: "Region")
         let idSort = NSSortDescriptor(key: "id", ascending: true)
         regionRequest.sortDescriptors = [idSort]
@@ -111,6 +126,7 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     }
     
     func getSkiAreas(){
+        self.activityIndicator.startAnimating()
         let skiAraRequest = NSFetchRequest<SkiArea>(entityName: "SkiArea")
         let idSort = NSSortDescriptor(key: "id", ascending: true)
         skiAraRequest.sortDescriptors = [idSort]
@@ -129,6 +145,7 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     }
     
     func loadRegions(regionId: String){
+        self.activityIndicator.startAnimating()
         SkimapClient.sharedInstance().getRegions(regionId: regionId, completitionHandler: { (xmlData, errorString) in
             
             print("xmlString: \(xmlData)")
@@ -163,8 +180,6 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
                     regionsPickerView.selectRow(row, inComponent: 0, animated: true)
                 }
             }
-        }else{
-            print("no regions in array")
         }
         
     }
@@ -185,9 +200,12 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
         if skiAreas.count > 0{
             infoLabel.text = "\(skiAreas.count) found in selected Region"
             searchButton.isEnabled = true
+        }else{
+            if parsingRegionLevel == 2{
+                displayError("No SkiAreas in selected Region")
+            }
         }
-        
-        
+        self.activityIndicator.stopAnimating()
         print("count of SkiAreas \(skiAreas.count)")
     }
     
@@ -226,6 +244,8 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.deleteAllSkiAreas(skiAreas: skiAreas)
+        self.searchButton.isEnabled = false
+        self.infoLabel.text = ""
         skiAreas.removeAll()
         if pickerView.tag == 0 {
             print("selected in lvl0 \(regionLvl0[row].name)")
@@ -321,13 +341,18 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
                     self.regionLvl0PickerView.reloadAllComponents()
                     self.regionLvl1PickerView.isHidden = true
                     self.regionLvl2PickerView.isHidden = true
+                    self.regionLvl1Label.isHidden = true
+                    self.regionLvl2Label.isHidden = true
                 }else if self.parsingRegionLevel == 1{
                     self.regionLvl1PickerView.reloadAllComponents()
                     self.regionLvl1PickerView.isHidden = false
                     self.regionLvl2PickerView.isHidden = true
+                    self.regionLvl1Label.isHidden = false
+                    self.regionLvl2Label.isHidden = true
                 }else if self.parsingRegionLevel == 2{
                     self.regionLvl2PickerView.reloadAllComponents()
                     self.regionLvl2PickerView.isHidden = false
+                    self.regionLvl2Label.isHidden = false
                 }
             }
             self.prepareToLoadSkiAreas()

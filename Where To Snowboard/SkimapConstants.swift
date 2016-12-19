@@ -8,10 +8,8 @@
 
 import Foundation
 
-//all ski resorts
-//https://skimap.org/SkiAreas/index.json
-//begining of regions
-//https://skimap.org/Regions/view.xml
+//Skimap API
+//https://skimap.org/pages/Developers
 
 struct SkimapConstants {
     
@@ -23,14 +21,23 @@ struct SkimapConstants {
         static func APIRegionsPathWithId(regionId: String) -> String{
             return "/Regions/view/"+regionId+".xml"
         }
-    }
-
-    struct SkimapParameterKeys {
         
+        static func APISkiAreaPathWithId(skiAreaId: String) -> String{
+            return "/SkiAreas/view/"+skiAreaId+".json"
+        }
     }
     
-    struct SkimapParameterValues {
-       
+    struct SkimapResponseKeys {
+        static let Id = "id"
+        static let Name = "name"
+        static let Latitude = "latitude"
+        static let Longitude = "longitude"
+        static let OfficialWebsite = "official_website"
+        static let OperatingStatus = "operating_status"
+    }
+    
+    struct SkimapResponseValues {
+        static let OKStatus = "ok"
     }
     
 }
