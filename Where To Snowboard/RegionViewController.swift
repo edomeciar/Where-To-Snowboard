@@ -214,7 +214,7 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
             infoLabel.text = "\(skiAreas.count) found in selected Region"
             searchButton.isEnabled = true
         }else{
-            if parsingRegionLevel == 2{
+            if parsingRegionLevel == 3{
                 displayError("No SkiAreas in selected Region")
             }
         }
@@ -285,6 +285,7 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
         } else if pickerView.tag == 2 {
             print("tag 2 skiareas count\(skiAreas.count)")
             self.selectRegion(regionArray: regionLvl2, selectedRow: row)
+            parsingRegionLevel = 3
             prepareToLoadSkiAreas()
         }
     }
