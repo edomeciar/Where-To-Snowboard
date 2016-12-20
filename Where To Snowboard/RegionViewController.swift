@@ -297,6 +297,7 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
         } else if pickerView.tag == 2 {
             print("tag 2 skiareas count\(skiAreas.count)")
             self.selectRegion(regionArray: regionLvl2, selectedRow: row)
+            loadRegions(regionId: String(regionLvl2[row].id))
             parsingRegionLevel = 3
             prepareToLoadSkiAreas()
         }
@@ -329,8 +330,10 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
             
         }
         if(elementName == "skiArea"){
+            print("start ski area")
             if let id = Int32(attributeDict["id"]!){
                 tmpSkiAreaId = id
+                print("SkiArea ID:\(id)")
             }
         }
         //var region = Region()
@@ -348,6 +351,7 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
             inRegions = false
         }
         if(elementName == "skiArea"){
+            print("end ski area")
             if let id = tmpSkiAreaId{
                 let newSkiArea = SkiArea(id: id, name: self.foundCharacters, context: self.sharedContext)
                 skiAreas.append(newSkiArea)
