@@ -200,11 +200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Where To Snowboard/DetailSkiAreaViewController.swift"
-            timestampString = "503858949.217342"
+            timestampString = "503924680.654666"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "getSkiAreadata()"
             landmarkType = "7">
          </BreakpointContent>

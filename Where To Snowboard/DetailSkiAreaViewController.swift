@@ -77,8 +77,7 @@ class DetailSkiAreaViewController: UIViewController, MKMapViewDelegate, NSFetche
             
             //print("jsonSkiAreaData: \(skiAreaData)")
             if let errorString = errorString{
-                print(errorString)
-                self.displayError("Showing data from CoreData")
+                self.displayError(errorString)
                 DispatchQueue.main.async {
                     self.updateView()
                 }
@@ -132,7 +131,7 @@ class DetailSkiAreaViewController: UIViewController, MKMapViewDelegate, NSFetche
         ]
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
         let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = "\(skiArea.name)"
+        mapItem.name = "\(skiArea.name!)"
         mapItem.openInMaps(launchOptions: options)
     }
     func updateView(){
