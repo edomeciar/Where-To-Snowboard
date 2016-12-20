@@ -49,7 +49,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, NSFetchedResultsCo
             if let skiAreas = fetchedResultController.fetchedObjects as [SkiArea]? {
                 print("Fetched SkiAreas")
                 for skiArea in skiAreas {
-                    if skiArea.geo_lat > 0.0 && skiArea.geo_lng > 0.0{
+                    if (skiArea.geo_lat > 0 || skiArea.geo_lat < 0) && (skiArea.geo_lng > 0 || skiArea.geo_lng < 0){
                         print("SkiArea lat: \(skiArea.geo_lat), SkiArea long: \(skiArea.geo_lng)")
                         mapView.addAnnotation(skiArea)
                         skireagionsWithGeo.append(skiArea)

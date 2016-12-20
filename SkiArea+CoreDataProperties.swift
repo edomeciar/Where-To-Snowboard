@@ -2,7 +2,7 @@
 //  SkiArea+CoreDataProperties.swift
 //  Where To Snowboard
 //
-//  Created by Edo on 09/12/2016.
+//  Created by Edo on 20/12/2016.
 //  Copyright © 2016 eduard.mecair. All rights reserved.
 //
 

@@ -55,7 +55,7 @@ class DetailSkiAreaViewController: UIViewController, MKMapViewDelegate, NSFetche
     }
     
     func addMapPin(){
-        if skiArea.geo_lat > 0.0 && skiArea.geo_lng > 0.0{
+        if (skiArea.geo_lat > 0 || skiArea.geo_lat < 0) && (skiArea.geo_lng > 0 || skiArea.geo_lng < 0){
             mapView.addAnnotation(skiArea)
             self.activityStatus.isHidden = true
             print("lan:\(self.skiArea.geo_lat) long:\(self.skiArea.geo_lng)")

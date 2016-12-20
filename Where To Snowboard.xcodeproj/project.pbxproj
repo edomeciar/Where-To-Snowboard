@@ -15,7 +15,6 @@
 		F4464CF51DFA037F00646D8B /* Region+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4464CF31DFA037F00646D8B /* Region+CoreDataClass.swift */; };
 		F4464CFA1DFA21F900646D8B /* Region+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4464CF91DFA21F900646D8B /* Region+CoreDataProperties.swift */; };
 		F4464D011DFB22BB00646D8B /* SkiArea+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4464CFF1DFB22BB00646D8B /* SkiArea+CoreDataClass.swift */; };
-		F4464D021DFB22BB00646D8B /* SkiArea+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4464D001DFB22BB00646D8B /* SkiArea+CoreDataProperties.swift */; };
 		F44B4E7E1DEDC68E00C051FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B4E7D1DEDC68E00C051FA /* AppDelegate.swift */; };
 		F44B4E831DEDC68E00C051FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44B4E811DEDC68E00C051FA /* Main.storyboard */; };
 		F44B4E851DEDC68E00C051FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44B4E841DEDC68E00C051FA /* Assets.xcassets */; };
@@ -25,6 +24,7 @@
 		F460DD491DEF553D00D74E71 /* SkimapClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460DD481DEF553D00D74E71 /* SkimapClient.swift */; };
 		F460DD4B1DEF559800D74E71 /* SkimapConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460DD4A1DEF559800D74E71 /* SkimapConstants.swift */; };
 		F460DD511DEF583200D74E71 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460DD501DEF583200D74E71 /* RegionViewController.swift */; };
+		F4C2392A1E09ED9E00854F60 /* SkiArea+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C239291E09ED9E00854F60 /* SkiArea+CoreDataProperties.swift */; };
 		F4E4FA021E055FD90072870D /* DetailSkiAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E4FA011E055FD90072870D /* DetailSkiAreaViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +56,6 @@
 		F4464CFB1DFA28AE00646D8B /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		F4464CFC1DFAE1F200646D8B /* Model 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 3.xcdatamodel"; sourceTree = "<group>"; };
 		F4464CFF1DFB22BB00646D8B /* SkiArea+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SkiArea+CoreDataClass.swift"; path = "../SkiArea+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F4464D001DFB22BB00646D8B /* SkiArea+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SkiArea+CoreDataProperties.swift"; path = "../SkiArea+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F44B4E7A1DEDC68E00C051FA /* Where To Snowboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where To Snowboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44B4E7D1DEDC68E00C051FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44B4E821DEDC68E00C051FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,6 +72,8 @@
 		F460DD481DEF553D00D74E71 /* SkimapClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkimapClient.swift; sourceTree = "<group>"; };
 		F460DD4A1DEF559800D74E71 /* SkimapConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkimapConstants.swift; sourceTree = "<group>"; };
 		F460DD501DEF583200D74E71 /* RegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
+		F4C239241E09EC9700854F60 /* Model 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 5.xcdatamodel"; sourceTree = "<group>"; };
+		F4C239291E09ED9E00854F60 /* SkiArea+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SkiArea+CoreDataProperties.swift"; path = "../SkiArea+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F4E4FA011E055FD90072870D /* DetailSkiAreaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSkiAreaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,7 +169,7 @@
 			children = (
 				F43D0B941E0886B900E23D89 /* CoreDataStack.swift */,
 				F4464CFF1DFB22BB00646D8B /* SkiArea+CoreDataClass.swift */,
-				F4464D001DFB22BB00646D8B /* SkiArea+CoreDataProperties.swift */,
+				F4C239291E09ED9E00854F60 /* SkiArea+CoreDataProperties.swift */,
 				F4464CF31DFA037F00646D8B /* Region+CoreDataClass.swift */,
 				F4464CF91DFA21F900646D8B /* Region+CoreDataProperties.swift */,
 				F4464CC61DF3258500646D8B /* Model.xcdatamodeld */,
@@ -329,12 +330,12 @@
 				F4464D011DFB22BB00646D8B /* SkiArea+CoreDataClass.swift in Sources */,
 				F460DD491DEF553D00D74E71 /* SkimapClient.swift in Sources */,
 				F460DD511DEF583200D74E71 /* RegionViewController.swift in Sources */,
+				F4C2392A1E09ED9E00854F60 /* SkiArea+CoreDataProperties.swift in Sources */,
 				F4464CC81DF3258500646D8B /* Model.xcdatamodeld in Sources */,
 				F460DD4B1DEF559800D74E71 /* SkimapConstants.swift in Sources */,
 				F444789A1E0206E0000F5698 /* TableViewCoreDataController.swift in Sources */,
 				F43D0B961E0886B900E23D89 /* CoreDataStack.swift in Sources */,
 				F4E4FA021E055FD90072870D /* DetailSkiAreaViewController.swift in Sources */,
-				F4464D021DFB22BB00646D8B /* SkiArea+CoreDataProperties.swift in Sources */,
 				F4464CFA1DFA21F900646D8B /* Region+CoreDataProperties.swift in Sources */,
 				F44B4E7E1DEDC68E00C051FA /* AppDelegate.swift in Sources */,
 				F4464CF51DFA037F00646D8B /* Region+CoreDataClass.swift in Sources */,
@@ -615,6 +616,7 @@
 		F4464CC61DF3258500646D8B /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				F4C239241E09EC9700854F60 /* Model 5.xcdatamodel */,
 				F44E063A1DFE211100B0914F /* Model 4.xcdatamodel */,
 				F4464CFC1DFAE1F200646D8B /* Model 3.xcdatamodel */,
 				F4464CFB1DFA28AE00646D8B /* Model 2.xcdatamodel */,
