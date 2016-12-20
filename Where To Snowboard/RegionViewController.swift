@@ -210,12 +210,12 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     }
     
     func prepareToLoadSkiAreas(){
+        infoLabel.text = "\(skiAreas.count) found in selected Region"
         if skiAreas.count > 0{
-            infoLabel.text = "\(skiAreas.count) found in selected Region"
             searchButton.isEnabled = true
         }else{
             if parsingRegionLevel == 3{
-                displayError("No SkiAreas in selected Region")
+                print("No SkiAreas in selected Region")
             }
         }
         DispatchQueue.main.async {
@@ -228,6 +228,15 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
         performSegue(withIdentifier: "showTabBarContollerSegue", sender: self)
         
     }
+    
+    @IBAction func cancelRegionView(_ sender: Any) {
+        print("cancel view")
+        self.dismiss(animated: true) { 
+            
+        }
+    }
+    
+    
     //Picker View 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
