@@ -91,7 +91,9 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     }
     
     func getRegions(){
-        self.activityIndicator.startAnimating()
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating()
+        }
         let regionRequest = NSFetchRequest<Region>(entityName: "Region")
         let idSort = NSSortDescriptor(key: "id", ascending: true)
         regionRequest.sortDescriptors = [idSort]
@@ -117,6 +119,7 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
                     self.setSelectedRegion(regionsArray: self.regionLvl0, regionsPickerView: self.regionLvl0PickerView)
                     self.setSelectedRegion(regionsArray: self.regionLvl1, regionsPickerView: self.regionLvl1PickerView)
                     self.setSelectedRegion(regionsArray: self.regionLvl2, regionsPickerView: self.regionLvl2PickerView)
+                    self.activityIndicator.stopAnimating()
                     
                 }
             }
@@ -126,7 +129,9 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     }
     
     func getSkiAreas(){
-        self.activityIndicator.startAnimating()
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating()
+        }
         let skiAraRequest = NSFetchRequest<SkiArea>(entityName: "SkiArea")
         let idSort = NSSortDescriptor(key: "id", ascending: true)
         skiAraRequest.sortDescriptors = [idSort]
@@ -138,6 +143,9 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
             if let skiAreas = skiAreaFetchedResultController.fetchedObjects as [SkiArea]?{
                 self.skiAreas = skiAreas
                 print("SkiAreas fetched from core data with count: \(skiAreas.count)")
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+                }
             }
         }catch{
             fatalError("Fail to init regionFetchedResultController \(error)")
@@ -145,12 +153,17 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     }
     
     func loadRegions(regionId: String){
-        self.activityIndicator.startAnimating()
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating()
+        }
         SkimapClient.sharedInstance().getRegions(regionId: regionId, completitionHandler: { (xmlData, errorString) in
             
             print("xmlString: \(xmlData)")
             if let errorString = errorString{
-                print(errorString)
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+                }
+                self.displayError(errorString)
             }else{
                 self.parser = XMLParser(data: xmlData!)
                 self.parser.delegate = self
@@ -205,7 +218,9 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
                 displayError("No SkiAreas in selected Region")
             }
         }
-        self.activityIndicator.stopAnimating()
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+        }
         print("count of SkiAreas \(skiAreas.count)")
     }
     

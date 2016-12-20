@@ -26,25 +26,22 @@ class SkimapClient: NSObject{
         
         let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
             
-            // if an error occurs, print it and re-enable the UI
-            func displayError(error: String) {
-                print(error)
-                completitionHandler(nil,error)
-            }
+            
             
             /* GUARD: Was there an error? */
             guard (error == nil) else {
                 print("There was an error with your request: \(error)")
-                completitionHandler(nil,"There was an error with your request: \(error)")
+                completitionHandler(nil,"Request to skimap.org returned an error. Please check your internet connection!")
                 return
             }
             
             /* GUARD: Did we get a successful 2XX response? */
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
                 print("Your request returned a status code other than 2xx!")
-                completitionHandler(nil,"Your request returned a status code other than 2xx!")
+                completitionHandler(nil,"Request to skimap.org wasn't successful. Please check your internet connection!")
                 return
             }
+        
             
             /* GUARD: Was there any data returned? */
             guard let data = data else {
@@ -75,20 +72,16 @@ class SkimapClient: NSObject{
         // create network request
         let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
             
-            // if an error occurs, print it and re-enable the UI
-            func displayError(error: String) {
-                completitionHandler(nil,error)
-            }
-            
             /* GUARD: Was there an error? */
             guard (error == nil) else {
-                completitionHandler(nil,"There was an error with your request: \(error)")
+                print("There was an error with your request: \(error)")
+                completitionHandler(nil,"Request to skimap.org returned an error. Please check your internet connection!")
                 return
             }
             
             /* GUARD: Did we get a successful 2XX response? */
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
-                completitionHandler(nil,"Your request returned a status code other than 2xx!")
+                completitionHandler(nil,"Request to skimap.org wasn't successful. Please check your internet connection!")
                 return
             }
             

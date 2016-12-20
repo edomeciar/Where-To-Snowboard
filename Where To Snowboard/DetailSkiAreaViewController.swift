@@ -64,7 +64,7 @@ class DetailSkiAreaViewController: UIViewController, MKMapViewDelegate, NSFetche
             mapView.setRegion(region, animated: true)
             directionButton.isEnabled = true
         }else{
-            displayError("No Loacation information for SkiArea<")
+            displayError("No Loacation info for SkiArea")
         }
         
     }
@@ -78,7 +78,7 @@ class DetailSkiAreaViewController: UIViewController, MKMapViewDelegate, NSFetche
             //print("jsonSkiAreaData: \(skiAreaData)")
             if let errorString = errorString{
                 print(errorString)
-                print("Showing data from CoreData")
+                self.displayError("Showing data from CoreData")
                 DispatchQueue.main.async {
                     self.updateView()
                 }
