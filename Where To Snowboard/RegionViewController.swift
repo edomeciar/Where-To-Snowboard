@@ -225,7 +225,10 @@ class RegionViewController: UIViewController, XMLParserDelegate, NSFetchedResult
     }
     
     @IBAction func showSkiAreasTouchUpAction(_ sender: Any) {
-        performSegue(withIdentifier: "showTabBarContollerSegue", sender: self)
+        self.dismiss(animated: true) { 
+            print("region view dismiss")
+        }
+        //performSegue(withIdentifier: "showTabBarContollerSegue", sender: self)
         
     }
     
